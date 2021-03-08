@@ -28,17 +28,12 @@
 
   <div class="field">
     <%= form.label :patient_name %>
-    <%= form.text_field :patient_name %>
+    <%= form.collection_select :patient_id, Patient.all, :id, :name, prompt: true %>
   </div>
 
   <div class="field">
     <%= form.label :doctor_name %>
-    <%= form.text_field :doctor_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :patient_id %>
-    <%= form.text_field :patient_id %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name, prompt: true %>
   </div>
 
   <div class="actions">
